@@ -1,0 +1,7 @@
+{
+  "name": "eunidos-verificacao-perfil-icp",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Página de verificação de perfil (ICP) da e-unidos! captação, com formulário gravando no Supabase e aviso por e-mail via Vercel + Resend para leads qualificados."
+}
