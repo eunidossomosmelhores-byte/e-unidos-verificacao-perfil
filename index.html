@@ -380,6 +380,8 @@
           </div>
         </div>
 
+        <input type="text" id="campo-site" name="site" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;">
+
         <div class="form-btns">
           <button type="submit" class="btn btn-primary" id="btn-enviar">Enviar</button>
           <p class="form-erro" id="form-erro">Não conseguimos registrar seus dados agora. Tente novamente em alguns minutos.</p>
@@ -435,14 +437,11 @@
 </footer>
 
 <script>
-  // ===== CONFIGURAÇÃO DO SUPABASE (preencher depois de criar o projeto) =====
-  // Painel do Supabase > Project Settings > API > "Project URL" e "anon public key".
-  // A chave "anon" é feita para ficar pública no código do site (é protegida pela
-  // política de segurança criada em supabase/schema.sql, que só permite inserir,
-  // nunca ler). Ainda assim, deixe só aqui, nunca misture com outras chaves do projeto.
-  var SUPABASE_URL = 'https://cccxvgopqebhplxqkpla.supabase.co';
-  var SUPABASE_ANON_KEY = 'sb_publishable_o24RwZmEwR0xQhMgNdvEMA_PFxpi7Pl';
-  // ===========================================================================
+  // ===== ENDEREÇO DO SCRIPT QUE GRAVA OS LEADS NA PLANILHA GOOGLE =====
+  // Colar aqui a URL do Apps Script (Implantar > App da Web). Passo a passo no README-DEPLOY.md.
+  // Essa URL é pública por natureza (todo formulário precisa dela) e só aceita novos leads.
+  var APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxWvhxkM8jpytLNPeyzRQRmGJ5vryGHH9vQXkQbw5upIqK67D8P_NwV9fYZ7E2BWvwbCQ/exec';
+  // ====================================================================
 
   // Limite de 3 temas selecionados
   var temaCheckboxes = Array.prototype.slice.call(document.querySelectorAll('input[name="tema"]'));
@@ -554,20 +553,18 @@
       estado: regiao,
       comunidades_tradicionais: tradicional,
       pontuacao: pontos,
-      faixa: faixa
+      faixa: faixa,
+      site: document.getElementById('campo-site').value
     };
 
-    fetch(SUPABASE_URL + '/rest/v1/leads', {
+    // Sem cabeçalho personalizado: o navegador não faz pré-verificação e o Apps Script aceita.
+    fetch(APPS_SCRIPT_URL, {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'apikey': SUPABASE_ANON_KEY,
-        'Authorization': 'Bearer ' + SUPABASE_ANON_KEY,
-        'Prefer': 'return=minimal'
-      },
       body: JSON.stringify(registro)
     }).then(function(resposta){
-      if (!resposta.ok) { throw new Error('Falha ao gravar lead'); }
+      return resposta.json();
+    }).then(function(resultado){
+      if (!resultado || !resultado.ok) { throw new Error('Falha ao gravar lead'); }
 
       form.style.display = 'none';
       introForm.style.display = 'none';
