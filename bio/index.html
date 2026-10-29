@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cinthia Fagundes | e-unidos! captação</title>
+<meta name="description" content="Captadora de recursos para OSCs. Conheça a e-unidos! captação.">
+<link rel="icon" href="/assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#F9F2EC;
+    --surface:#FFFFFF;
+    --ink:#1D4658;
+    --ink-muted:#5B7482;
+    --terracotta:#C46C3A;
+    --terracotta-deep:#A85A2E;
+    --olive:#5A6044;
+    --border:#E6D9C8;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  a{text-decoration:none;color:inherit;}
+  body{
+    font-family:'Work Sans',system-ui,sans-serif;
+    background:var(--cream);
+    color:var(--ink);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    padding:48px 16px;
+  }
+  .bio-card{width:100%;max-width:420px;text-align:center;}
+  .avatar{
+    width:112px;height:112px;border-radius:50%;object-fit:cover;
+    margin:0 auto 18px;border:3px solid #fff;box-shadow:0 10px 24px rgba(29,70,88,0.18);
+  }
+  .handle{font-weight:700;font-size:17px;color:var(--ink);}
+  .tagline{
+    font-family:'Fraunces',serif;font-weight:600;font-size:15px;
+    color:var(--terracotta-deep);text-transform:uppercase;letter-spacing:0.04em;
+    margin-top:6px;
+  }
+  .sub{font-size:14.5px;color:var(--ink-muted);margin-top:10px;padding:0 8px;}
+  .links{margin-top:28px;display:flex;flex-direction:column;gap:14px;}
+  .link-btn{
+    display:block;width:100%;padding:16px 20px;border-radius:16px;
+    background:var(--surface);border:1.5px solid var(--border);
+    font-weight:600;font-size:15px;color:var(--ink);
+    box-shadow:0 6px 16px rgba(29,70,88,0.06);
+    transition:transform .15s ease, border-color .15s ease;
+  }
+  .link-btn:hover{transform:translateY(-2px);border-color:var(--terracotta);}
+  .link-btn.primary{background:var(--terracotta);color:#fff;border-color:var(--terracotta);}
+  .link-btn.primary:hover{background:var(--terracotta-deep);}
+  footer{margin-top:40px;font-size:12.5px;color:var(--ink-muted);}
+  footer a{color:var(--terracotta-deep);font-weight:600;text-decoration:none;}
+</style>
+</head>
+<body>
+
+<div class="bio-card">
+  <img src="/assets/logo.png" alt="E-Unidos!" class="avatar">
+  <div class="handle">@cinthia_captarecursos</div>
+  <div class="tagline">Captadora de recursos</div>
+  <p class="sub">Faixa-preta do Método Captar · R$ 13,5 milhões em projetos aprovados</p>
+
+  <div class="links">
+    <a href="/verificacao" class="link-btn primary">Quero conhecer sua instituição</a>
+    <a href="/" class="link-btn">O que fazemos e resultados</a>
+    <a href="/portfolio" class="link-btn">Portfólio</a>
+  </div>
+
+  <footer>
+    <p>e-unidos! captação · Cinthia Fagundes · Blumenau, SC</p>
+    <p><a href="https://e-unidos.com.br">e-unidos.com.br</a></p>
+  </footer>
+</div>
+
+</body>
+</html>
