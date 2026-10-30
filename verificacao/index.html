@@ -6,26 +6,27 @@
 <title>e-unidos! captação | Verificação de perfil para OSCs de sociobiodiversidade e agricultura familiar</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:FILL@1" rel="stylesheet">
 <link rel="icon" href="/assets/logo.png">
 <style>
   :root{
-    --bg:#F9F2EC;
+    --bg:#F3F6F4;
     --card:#FFFFFF;
-    --text:#1D4658;
-    --text-muted:rgba(29,70,88,0.68);
-    --footer-text:#5B7482;
-    --border-card:#E6D9C8;
-    --border-input:#E6D9C8;
-    --gold-1:#C46C3A;
-    --gold-2:#A85A2E;
-    --gold-text:#ffffff;
-    --green:#5A6044;
+    --text:#0D1F19;
+    --text-muted:rgba(13,31,25,0.6);
+    --footer-text:rgba(255,255,255,0.6);
+    --border-card:#D9E2DD;
+    --border-input:#D9E2DD;
+    --gold-1:#D98A4F;
+    --gold-2:#B36B35;
+    --gold-text:#0D1F19;
+    --green:#0E2620;
   }
   *{margin:0;padding:0;box-sizing:border-box;}
   html{scroll-behavior:smooth;}
   body{
-    font-family:'Work Sans',system-ui,sans-serif;
+    font-family:'Manrope',system-ui,sans-serif;
     background:var(--bg);
     color:var(--text);
     line-height:1.6;
@@ -34,8 +35,9 @@
   img{max-width:100%;display:block;}
   .container{max-width:1080px;margin:0 auto;padding:0 20px;}
   section{padding:56px 0;}
+  .ms{font-family:'Material Symbols Rounded';line-height:1;}
 
-  h1,h2,h3{font-family:'Fraunces',Georgia,serif;}
+  h1,h2,h3{font-family:'Manrope',system-ui,sans-serif;font-weight:800;letter-spacing:-0.01em;}
   h1{font-size:clamp(26px,4vw,38px);font-weight:700;line-height:1.25;margin-bottom:16px;}
   h2{font-size:clamp(20px,2.8vw,27px);font-weight:600;line-height:1.25;margin-bottom:14px;}
   h3{font-size:19px;font-weight:600;margin-bottom:8px;}
@@ -111,7 +113,7 @@
   }
   .plano-card.destaque{border-color:var(--gold-1);box-shadow:0 0 0 1px var(--gold-1);}
   .plano-nome{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.04em;color:var(--gold-1);margin-bottom:10px;}
-  .plano-preco{font-size:21px;font-weight:700;color:var(--text);margin-bottom:12px;font-family:'Fraunces',serif;}
+  .plano-preco{font-size:21px;font-weight:700;color:var(--text);margin-bottom:12px;}
   .plano-card p{font-size:14px;color:var(--text-muted);flex-grow:1;}
   .ancoragem-box{
     margin-top:24px;
@@ -207,9 +209,9 @@
 
   /* RODAPE */
   footer{
-    padding:32px 0;
+    padding:40px 0;
     text-align:center;
-    border-top:1px solid var(--border-card);
+    background:var(--green);
   }
   footer p{font-size:13.5px;color:var(--footer-text);}
   footer a{color:var(--gold-1);font-weight:600;}
@@ -230,8 +232,9 @@
     border-bottom:1px solid var(--border-card);
   }
   .nav .container{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;max-width:1080px;margin:0 auto;}
-  .nav-brand{display:flex;align-items:center;gap:10px;font-family:'Fraunces',serif;font-weight:600;font-size:18px;color:var(--text);}
-  .nav-brand img{width:36px;height:36px;border-radius:8px;}
+  .nav-brand{display:flex;align-items:center;gap:10px;font-weight:600;font-size:18px;color:var(--text);}
+  .nav-brand img{width:48px;height:48px;}
+  .nav-brand .sub{font-size:9.5px;font-weight:700;letter-spacing:0.1em;color:var(--text-muted);}
   .nav-links{display:flex;align-items:center;gap:24px;font-size:14px;font-weight:500;}
   .nav-links a{color:var(--text);opacity:0.85;}
   .nav-links a:hover{opacity:1;}
@@ -243,7 +246,7 @@
 
 <nav class="nav">
   <div class="container">
-    <a href="/" class="nav-brand"><img src="/assets/logo.png" alt="E-Unidos!"> E-Unidos!</a>
+    <a href="/" class="nav-brand"><img src="/assets/logo.png" alt="E-Unidos!"><span><span style="display:block;">E-Unidos!</span><span class="sub">CAPTAÇÃO DE RECURSOS</span></span></a>
     <div class="nav-links">
       <a href="/">Início</a>
       <a href="/portfolio">Portfólio</a>
@@ -437,7 +440,8 @@
     <div class="planos-grid">
       <div class="plano-card">
         <div class="plano-nome">Pontual</div>
-        <div class="plano-preco">R$ 1.000 + 10% de êxito</div>
+        <div class="plano-preco">Valor a combinar</div>
+        <div style="font-size:13px;color:var(--text-muted);margin-top:-8px;margin-bottom:12px;">+ 10% de êxito, só se aprovar · varia conforme o edital</div>
         <p>Uma oportunidade específica já mapeada, com apoio técnico completo até a submissão.</p>
       </div>
       <div class="plano-card destaque">
