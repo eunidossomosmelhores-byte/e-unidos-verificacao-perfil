@@ -155,6 +155,18 @@ p{color:var(--ink-muted);font-size:16px;}
 .teaser-photo img{width:100%;height:100%;object-fit:cover;object-position:center 15%;}
 .teaser p b{color:var(--ink);font-weight:700;}
 
+/* DEPOIMENTOS */
+.depoimentos-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:32px;}
+.depoimento-card{
+  background:var(--green-deep);border-radius:18px;padding:28px 26px;
+  display:flex;flex-direction:column;
+}
+.depoimento-card .quote-icon{color:var(--lime);font-size:26px;margin-bottom:14px;}
+.depoimento-card p.fala{color:rgba(255,255,255,0.85);font-size:14.5px;font-style:italic;flex-grow:1;margin-bottom:18px;}
+.depoimento-card .assinatura{font-size:13px;color:rgba(255,255,255,0.55);border-top:1px solid rgba(255,255,255,0.12);padding-top:14px;}
+.depoimento-card .assinatura b{color:#fff;font-weight:700;}
+@media (max-width:860px){ .depoimentos-grid{grid-template-columns:1fr;} }
+
 /* FAQ */
 .faq-item{border:1px solid var(--border);border-radius:16px;padding:18px 24px;margin-bottom:12px;background:var(--surface);}
 .faq-q{display:flex;align-items:center;justify-content:space-between;gap:16px;cursor:pointer;}
