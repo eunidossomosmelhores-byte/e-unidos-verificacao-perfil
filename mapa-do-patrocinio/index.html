@@ -358,10 +358,10 @@ footer a:hover{color:var(--lime);}
     <p class="lead">É quando a empresa de Lucro Real decide para onde vai o saldo dedutível que ainda não foi destinado. Quanto antes a conversa certa chegar, maior a chance desse saldo ir para o seu projeto.</p>
     <div class="total-card">
       <div>
-        <div class="eyebrow2">Faltam até o fechamento do exercício</div>
-        <div class="num" id="dias-restantes">— dias</div>
+        <div class="eyebrow2">O exercício fiscal fecha em</div>
+        <div class="num">Dezembro</div>
       </div>
-      <div class="desc">Contagem calculada a partir de hoje, até 31/12. Esse é o prazo real para a empresa decidir o destino do saldo.</div>
+      <div class="desc">É nesse mês que a empresa de Lucro Real decide o destino do saldo dedutível que ainda não foi destinado.</div>
     </div>
     <a class="btn-pill" href="https://wa.me/5547991083568" target="_blank" rel="noopener">
       Quero começar agora <span class="ms arrow">north_east</span>
@@ -372,7 +372,7 @@ footer a:hover{color:var(--lime);}
 <section class="investimento">
   <div class="container reveal">
     <div class="eyebrow">Investimento</div>
-    <h2>Pacote fechado, pago na entrega</h2>
+    <h2>Pacote fechado, valor único</h2>
     <p style="max-width:560px;">Sem honorário de êxito: a entrega é a estrutura pronta, quem conduz a conversa com a empresa é a sua equipe.</p>
     <div class="plano-wrap">
       <div class="plano-card">
@@ -443,16 +443,6 @@ footer a:hover{color:var(--lime);}
 </footer>
 
 <script>
-  // contagem de dias até 31/12 do ano corrente
-  (function(){
-    var hoje = new Date();
-    var fim = new Date(hoje.getFullYear(), 11, 31);
-    if (hoje > fim) { fim = new Date(hoje.getFullYear()+1, 11, 31); }
-    var diff = Math.ceil((fim - hoje) / (1000*60*60*24));
-    var el = document.getElementById('dias-restantes');
-    if (el) el.textContent = diff + ' dias';
-  })();
-
   // reveal on scroll
   (function(){
     var els = document.querySelectorAll('.reveal');
